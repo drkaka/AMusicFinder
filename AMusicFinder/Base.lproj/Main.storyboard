@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lsY-qZ-MX1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Apple Music Finder-->
+        <scene sceneID="ByK-BM-vPm">
+            <objects>
+                <tableViewController storyboardIdentifier="ResultsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NEb-lq-laz" customClass="ResultsViewController" customModule="AMusicFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NLY-Qv-fN5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Music to Search" id="x4B-mE-NHO">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="NEb-lq-laz" id="dvg-Wp-Gkf"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="101" id="TnV-dl-dec" customClass="SongCell" customModule="AMusicFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="101"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TnV-dl-dec" id="Dlr-Yk-q4C">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gwg-8N-t0k">
+                                            <rect key="frame" x="16" y="11" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="LA9-Kg-yvZ"/>
+                                                <constraint firstAttribute="height" constant="60" id="V4F-Ab-f8m"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label saer  wq wqr sadfqwe rwq qw" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyf-YS-Erg">
+                                            <rect key="frame" x="86" y="11" width="273" height="41"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZd-IF-lqb">
+                                            <rect key="frame" x="86" y="72" width="273" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nZd-IF-lqb" firstAttribute="leading" secondItem="Gwg-8N-t0k" secondAttribute="trailing" constant="10" id="2eH-f0-WPU"/>
+                                        <constraint firstItem="nZd-IF-lqb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Iyf-YS-Erg" secondAttribute="bottom" priority="750" constant="10" id="6HF-Ew-ajT"/>
+                                        <constraint firstItem="Iyf-YS-Erg" firstAttribute="top" secondItem="Dlr-Yk-q4C" secondAttribute="topMargin" id="7By-6s-2Va"/>
+                                        <constraint firstItem="Gwg-8N-t0k" firstAttribute="leading" secondItem="Dlr-Yk-q4C" secondAttribute="leadingMargin" id="AHY-XD-Rfp"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="nZd-IF-lqb" secondAttribute="bottom" id="CTj-61-L4H"/>
+                                        <constraint firstItem="Gwg-8N-t0k" firstAttribute="top" secondItem="Dlr-Yk-q4C" secondAttribute="topMargin" id="N82-W9-fd3"/>
+                                        <constraint firstItem="Iyf-YS-Erg" firstAttribute="leading" secondItem="Gwg-8N-t0k" secondAttribute="trailing" constant="10" id="b9S-cw-YCN"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Gwg-8N-t0k" secondAttribute="bottom" id="chW-j2-xdO"/>
+                                        <constraint firstItem="nZd-IF-lqb" firstAttribute="trailing" secondItem="Dlr-Yk-q4C" secondAttribute="trailingMargin" id="kpj-mz-cev"/>
+                                        <constraint firstItem="Iyf-YS-Erg" firstAttribute="trailing" secondItem="Dlr-Yk-q4C" secondAttribute="trailingMargin" id="vmu-3O-alB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="artistLabel" destination="nZd-IF-lqb" id="ZAY-Bc-3aa"/>
+                                    <outlet property="artwork" destination="Gwg-8N-t0k" id="704-Ud-JOp"/>
+                                    <outlet property="trackLabel" destination="Iyf-YS-Erg" id="YfH-x3-DQN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NEb-lq-laz" id="zDS-hb-wis"/>
+                            <outlet property="delegate" destination="NEb-lq-laz" id="8eD-ck-VOh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Apple Music Finder" id="uMx-Uj-dE9"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Q4S-0g-3Mg" id="uxe-K6-Vr5"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPB-x7-Xm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="8bQ-jn-kal">
+                    <connections>
+                        <outlet property="delegate" destination="NEb-lq-laz" id="gAh-nd-I3H"/>
+                        <outlet property="searchContentsController" destination="NEb-lq-laz" id="SPG-ep-YWv"/>
+                        <outlet property="searchResultsDataSource" destination="NEb-lq-laz" id="8n2-3C-X2y"/>
+                        <outlet property="searchResultsDelegate" destination="NEb-lq-laz" id="qZ4-nX-CiP"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="Q4S-0g-3Mg">
+                    <connections>
+                        <outlet property="delegate" destination="NEb-lq-laz" id="y6J-KP-gQr"/>
+                        <outlet property="searchContentsController" destination="NEb-lq-laz" id="L73-ZD-hCl"/>
+                        <outlet property="searchResultsDataSource" destination="NEb-lq-laz" id="ffe-4e-3A6"/>
+                        <outlet property="searchResultsDelegate" destination="NEb-lq-laz" id="ywy-8B-QtK"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="244" y="-230.73463268365819"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2sU-4d-uwU">
+            <objects>
+                <navigationController id="lsY-qZ-MX1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DBF-ye-LgL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NEb-lq-laz" kind="relationship" relationship="rootViewController" id="Iix-S2-82m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUJ-2t-stg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-708" y="-230"/>
+        </scene>
+    </scenes>
+</document>
