@@ -25,7 +25,6 @@
 		A93372A120B90164005C3165 /* SearchURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93372A020B90164005C3165 /* SearchURL.swift */; };
 		A93372A320B9027A005C3165 /* SearchURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93372A220B9027A005C3165 /* SearchURLTests.swift */; };
 		A93372A520B93676005C3165 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93372A420B93676005C3165 /* SongCell.swift */; };
-		A93372A720B94861005C3165 /* UITestingID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93372A620B94861005C3165 /* UITestingID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +69,6 @@
 		A93372A020B90164005C3165 /* SearchURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURL.swift; sourceTree = "<group>"; };
 		A93372A220B9027A005C3165 /* SearchURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURLTests.swift; sourceTree = "<group>"; };
 		A93372A420B93676005C3165 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
-		A93372A620B94861005C3165 /* UITestingID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				A933729120B7FEBE005C3165 /* Settings.swift */,
-				A93372A620B94861005C3165 /* UITestingID.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -333,7 +330,6 @@
 				A93372A120B90164005C3165 /* SearchURL.swift in Sources */,
 				A933728920B7FA2F005C3165 /* ResultsViewController.swift in Sources */,
 				A933728D20B7FBA7005C3165 /* ResultsViewProtocol.swift in Sources */,
-				A93372A720B94861005C3165 /* UITestingID.swift in Sources */,
 				A933729520B802D1005C3165 /* Errors.swift in Sources */,
 				A933729F20B8FF8C005C3165 /* MockProtocols.swift in Sources */,
 			);

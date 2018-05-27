@@ -26,7 +26,7 @@ class ResultsViewVMTests: XCTestCase {
     func testSearchMusicWithEmptyTerm() {
         let exp = expectation(description: "Waiting for closure to return")
         
-        viewModel.searchMusic(term: "") { _, err in
+        viewModel.searchMusic(term: "") { err in
             // should return an error
             XCTAssertNotNil(err)
             
@@ -45,14 +45,11 @@ class ResultsViewVMTests: XCTestCase {
     func testSearchResult() {
         let exp = expectation(description: "Waiting for closure to return")
         
-        viewModel.searchMusic(term: "swift", completion: { searchResult, err in
-            guard let results = searchResult else {
-                XCTFail("should have search results")
-                return
-            }
+        viewModel.searchMusic(term: "swift", completion: { err in
             
             XCTAssertNil(err, "Error should be nil")
-            XCTAssertEqual(50, results.resultCount, "Default should return 50 results")
+            // should get reloaded musics
+            XCTAssertEqual(50, self.viewModel.musicCount, "Default should return 50 results")
             
             exp.fulfill()
         })

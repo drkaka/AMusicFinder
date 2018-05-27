@@ -58,7 +58,7 @@ class AMusicFinderUITests: XCTestCase {
         // dismiss avplayer
         app.buttons["Done"].tap()
         
-        // input empty term
+        // test empty seach case
         searchBar.tap()
         // delete "swift"
         deleteField(searchBar: searchBar)
@@ -73,7 +73,7 @@ class AMusicFinderUITests: XCTestCase {
         // dismiss
         app.alerts.buttons["OK"].tap()
         
-        // searchbar should return active
+        // after error, searchbar should return active
         let searchButtonShown = app.keyboards.buttons["Search"].waitForExistence(timeout: 5)
         XCTAssertTrue(searchButtonShown, "searchbar should return first response")
     }
